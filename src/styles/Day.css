@@ -1,0 +1,55 @@
+.body{
+    overflow: hidden;
+}
+.day-container {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(
+        to top,
+        #fca86e 0%,     /* light orange bottom */
+        #f38b82 30%,    /* peachy pink */
+        #e175a9 60%,    /* mauve pink */
+        #944d99 100%    /* purple top */
+      );
+}
+.sunAndBirds{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
+    width: 100%;
+    position: relative;
+}
+.sundiv{
+    position: absolute;
+    transition: transform 2s ease;
+    cursor: pointer;
+    top:0;
+    right:0;
+}
+.sunimg{
+    width: 200px;
+    height: 200px;
+}
+.branchimg{
+    height:600px;
+    width: 600px;
+}
+.birdimg{
+    width: 150px;
+    height:150px;
+    top:17%;
+    left:12%;
+    transition: transform 2s ease;
+    position: absolute;
+    cursor: pointer;
+}
+.sundiv:hover{
+    transform: scale(1.5);
+}
+.branchesAndBirds{
+    overflow: hidden;
+    position: relative;
+    max-width: 100%;
+}
