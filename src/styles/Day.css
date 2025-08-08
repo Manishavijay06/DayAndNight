@@ -25,7 +25,7 @@
     position: absolute;
     transition: transform 2s ease;
     cursor: pointer;
-    top:0;
+    top:50px;
     right:0;
 }
 .sunimg{
@@ -52,4 +52,5 @@
     overflow: hidden;
     position: relative;
     max-width: 100%;
+    left: 60%;
 }

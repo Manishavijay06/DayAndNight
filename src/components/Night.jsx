@@ -9,12 +9,14 @@ import nytbranch from "../assets/branch.png";
 import owl from "../assets/owl.png";
 import shootingstar from "../assets/shooting-star.png";
 
-gsap.registerPlugin(useGSAP,ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 
-export default function Night() {
+export default function Night({onOwlClick}){
     const moonRef=useRef(null);
     const starsblinkRef=useRef(null);
     const shootStarRef=useRef(null);
+    const owlRef=useRef(null);
+
     useGSAP(()=>{
         gsap.fromTo(moonRef.current,{
             x:"-800px",
@@ -53,6 +55,24 @@ export default function Night() {
             yoyo:true,
         })
     },[])
+
+    const handleClick=()=>{
+        gsap.fromTo(owlRef.current,
+            { y: 0 ,x:0},
+            {
+              x:200,
+              y:800,
+              duration:2,
+              ease: "bounce.out",
+              yoyo: true,
+              onComplete:()=>{
+                gsap.to(owlRef.current,{
+                    y:0,
+                    x:0,
+                })
+              },
+            })
+    };
     return( 
     <>
     <div className="night-container">
@@ -72,7 +92,7 @@ export default function Night() {
         </div>
         <div className="branchesandbirds">
                 <img className="branch"  src={nytbranch} alt="nytbranch"></img>
-                <img className="owl" src={owl} alt="owl"></img>          
+                <img className="owl" src={owl} alt="owl" onMouseEnter={handleClick} onClick={onOwlClick} ref={owlRef}></img>          
         </div>
     </div>
     </>
