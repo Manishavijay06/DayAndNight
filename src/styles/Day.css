@@ -32,6 +32,24 @@
     width: 200px;
     height: 200px;
 }
+.branchimg{
+    height:600px;
+    width: 600px;
+}
+.birdimg{
+    width: 150px;
+    height:150px;
+    top:17%;
+    left:12%;
+    transition: transform 2s ease;
+    position: absolute;
+    cursor: pointer;
+}
 .sundiv:hover{
     transform: scale(1.5);
+}
+.branchesAndBirds{
+    overflow: hidden;
+    position: relative;
+    max-width: 100%;
 }

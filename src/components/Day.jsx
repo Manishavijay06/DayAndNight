@@ -5,11 +5,12 @@ import { useRef } from "react";
 import "../styles/Day.css";
 import sun from "../assets/sun.png";
 import bird from "../assets/bird.png";
-import branch from "../assets/branch.png";
+import branch from "../assets/dayBranch.png";
 
 gsap.registerPlugin(gsap,ScrollTrigger);
 
 export default function Day(){
+    
     return (
     <>
     <div className="day-container">
