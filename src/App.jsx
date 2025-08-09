@@ -10,7 +10,7 @@ function App() {
   const scrollToNight = () => {
     console.log("hi night");
     gsap.to(containerRef.current, {
-      y: "0vh", // Scroll up to night
+      y: "0vh", 
       duration: 1,
       ease: "power2.inOut",
     
@@ -20,7 +20,7 @@ function App() {
   const scrollToDay = () => {
     console.log('hi day');
       gsap.to(containerRef.current, {
-      y: "-100vh", // Scroll down to day
+      y: "-100vh", 
       duration: 1,
       ease: "power2.inOut",
     });
